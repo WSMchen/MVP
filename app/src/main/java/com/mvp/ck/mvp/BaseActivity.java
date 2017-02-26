@@ -2,6 +2,7 @@ package com.mvp.ck.mvp;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.widget.Toast;
 
 import com.mvp.ck.mvp.presenter.BasePresenter;
 
@@ -17,6 +18,9 @@ public abstract class BaseActivity<V,T extends BasePresenter<V>> extends Activit
         super.onCreate(savedInstanceState);
         mPresenter = createPresenter();
         mPresenter.attachView((V)this);
+
+        Toast.makeText(this,"haha",Toast.LENGTH_LONG).show();
+
     }
 
     @Override
